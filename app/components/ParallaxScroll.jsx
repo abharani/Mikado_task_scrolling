@@ -46,7 +46,7 @@ const ParallaxScroll = ({ images, videos, className }) => {
                       : translateThird,
                 }}
                 key={`grid-${index}-${idx}`}
-                className="relative overflow-hidden transition-all duration-300 ease-in-out hover:rounded-se-[6vw] hover:rounded-es-2xl hover:rounded-l-[3.5vw]"
+                className="relative overflow-hidden transition-all duration-300 ease-in-out hover:rounded-se-[6vw] hover:rounded-es-2xl hover:rounded-l-[3.5vw] hover:cursor-pointer"
               >
                 <Image
                   src={el}
