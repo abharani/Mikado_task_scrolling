@@ -82,9 +82,10 @@ import FlipWordsDemo from "./pages/heading";
    );
  }
 const images = [
+  "https://images.ctfassets.net/9uhkiji6mhey/6dtAi4XAkX630cXhx2oqWP/c73e6dc973736e65651af14892d47f35/Thumbnail_-_Image_-_Portrait-new.jpg?w=980&fm=jpg&q=100",
   "https://images.ctfassets.net/9uhkiji6mhey/2gcPv71pamp2VRNGddYLcC/faf1e950b297964178d376c2d563fa2d/Thumbnail_-_Video_-_Portrait_-_Big.png?w=980&fm=jpg",
   " https://images.ctfassets.net/9uhkiji6mhey/GiJwvriAvVLRfOvapmlmi/93c3aee3a32433257b383c9d709f9575/Undo-the-Firewall_Thumbnail_Landscape.jpg?w=980&fm=jpg&q=100",
-  "https://images.ctfassets.net/9uhkiji6mhey/6dtAi4XAkX630cXhx2oqWP/c73e6dc973736e65651af14892d47f35/Thumbnail_-_Image_-_Portrait-new.jpg?w=980&fm=jpg&q=100",
+
   "https://images.ctfassets.net/9uhkiji6mhey/5VRn088p8CCLupC3WRry1F/aea92bc664d5319521db1296db51d66c/esm-landscape.jpg?w=980&fm=jpg&q=100",
   "https://images.ctfassets.net/9uhkiji6mhey/4HEpLy3NDY7Qv2YniOdenf/246ebcd66472cb5d778b9d5cd7581a43/Thumbnail_-_Image_-_Portrait-logo.png?w=980&fm=jpg",
 
@@ -100,9 +101,10 @@ const images = [
   // "/Bg.jpg",
 ];
 const videos = [
+  "https://videos.ctfassets.net/9uhkiji6mhey/5aPyBNQQ3mGEpUwoYagcWF/3fd91496cde7c0310f098657e02a6dbb/Thumbnail_-_Video_-_Portrait_-_Big-NEW.mp4",
   "https://videos.ctfassets.net/9uhkiji6mhey/12ZMYVLIBKAeMxprQpMwMG/69328a415938f4f64ca6fbc0002bd951/Thumbnail_-_Image_-_Portrait.mp4",
   "https://videos.ctfassets.net/9uhkiji6mhey/6LVh3az7KUF6NOAjEwy5QE/64315dc4c649067739df1c99b4c90f31/Hero_loop.mp4",
-  "https://videos.ctfassets.net/9uhkiji6mhey/5aPyBNQQ3mGEpUwoYagcWF/3fd91496cde7c0310f098657e02a6dbb/Thumbnail_-_Video_-_Portrait_-_Big-NEW.mp4",
+
   "https://videos.ctfassets.net/9uhkiji6mhey/4ucqGMyuf982kCb3PTEtnV/6e4c06ef941a602f2d239d1a7737d7df/esm-landscape_1.mp4",
   "https://videos.ctfassets.net/9uhkiji6mhey/7pAXlJdKv3hvY4OAf5YWzz/7f0fa564c5a37c44b6551f786b15e1c3/3_____Portrait_-_Big.mp4",
 

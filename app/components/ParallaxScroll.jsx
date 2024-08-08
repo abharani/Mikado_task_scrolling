@@ -1,10 +1,7 @@
-
-
 import React, { useRef } from "react";
 import { useScroll, useTransform, motion } from "framer-motion";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
-
 
 const ParallaxScroll = ({ images, videos, className }) => {
   const gridRef = useRef(null);
@@ -13,9 +10,9 @@ const ParallaxScroll = ({ images, videos, className }) => {
     offset: ["start start", "end start"],
   });
 
-  const translateFirst = useTransform(scrollYProgress, [0, 1], [0, 400]);
-  const translateSecond = useTransform(scrollYProgress, [0, 1], [0, 600]);
-  const translateThird = useTransform(scrollYProgress, [0, 1], [0, 400]);
+  const translateFirst = useTransform(scrollYProgress, [0, 1], [0, -200]);
+  const translateSecond = useTransform(scrollYProgress, [0, 1], [0, 200]);
+  const translateThird = useTransform(scrollYProgress, [0, 1], [0, -200]);
 
   const third = images.length / 3;
 
@@ -33,7 +30,7 @@ const ParallaxScroll = ({ images, videos, className }) => {
       ref={gridRef}
     >
       <div
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:items-start max-w-5xl lg:max-w-7xl mx-auto gap-20 lg:gap-[6vw] py-40 items-center px-[20vw] md:px-0"
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:items-start max-w-5xl xl:max-w-7xl mx-auto gap-20 lg:gap-[6vw] py-40 items-center px-[20vw] md:px-0"
         ref={gridRef}
       >
         {[firstPart, secondPart, thirdPart].map((part, index) => (
@@ -49,30 +46,29 @@ const ParallaxScroll = ({ images, videos, className }) => {
                       : translateThird,
                 }}
                 key={`grid-${index}-${idx}`}
+                className="relative overflow-hidden transition-all duration-300 ease-in-out hover:rounded-se-[6vw] hover:rounded-es-2xl hover:rounded-l-[3.5vw]"
               >
-                <div className="relative">
-                  <Image
-                    src={el}
-                    className="object-cover object-left-top gap-10 !m-0 !p-0 hover:cursor-pointer"
-                    height="400"
-                    width="400"
-                    alt="thumbnail"
-                  />
-                  <video
-                    src={
-                      index === 0
-                        ? firstVideos[idx]
-                        : index === 1
-                        ? secondVideos[idx]
-                        : thirdVideos[idx]
-                    }
-                    className="absolute top-0 left-0 w-full h-full object-cover opacity-0 hover:opacity-100"
-                    muted
-                    playsInline
-                    onMouseEnter={(e) => e.currentTarget.play()}
-                    onMouseLeave={(e) => e.currentTarget.pause()}
-                  />
-                </div>
+                <Image
+                  src={el}
+                  className="object-cover object-left-top w-full h-full hover:cursor-pointer transition-all duration-300 ease-in-out"
+                  height="400"
+                  width="400"
+                  alt="thumbnail"
+                />
+                <video
+                  src={
+                    index === 0
+                      ? firstVideos[idx]
+                      : index === 1
+                      ? secondVideos[idx]
+                      : thirdVideos[idx]
+                  }
+                  className="absolute top-0 left-0 w-full h-full object-cover opacity-0 transition-all duration-300 ease-in-out hover:opacity-100"
+                  muted
+                  playsInline
+                  onMouseEnter={(e) => e.currentTarget.play()}
+                  onMouseLeave={(e) => e.currentTarget.pause()}
+                />
               </motion.div>
             ))}
           </div>
